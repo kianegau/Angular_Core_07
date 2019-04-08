@@ -38,6 +38,7 @@ export class AppComponent {
     { id: 4, name: 'videoCount' },
     { id: 5, name: 'viewCount' }
   ];
+  // Variable to store value index of orders with default value assigned by 1
   selected = 0;
   // Constructor to call Service, funxtion to handle safe url and Modal
   constructor(
@@ -70,7 +71,6 @@ export class AppComponent {
     );
     this.fatubeService.playVideos(id.videoId).subscribe(data => {
       this.videosdetail = data.items;
-      console.log(id.videoId);
     });
     this.fatubeService.getRelatedById(id.videoId).subscribe(data => {
       this.videosRelated = data.items;
