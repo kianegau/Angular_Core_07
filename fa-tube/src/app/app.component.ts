@@ -58,8 +58,6 @@ export class AppComponent {
         }
       });
     this.videos = [];
-    console.log(this.orders[this.selected].name);
-    console.log(this.searchValue);
   }
   // Function handle even when user clicks image of videos then display popup video
   playVideo(id, description, title, channelname) {
